@@ -123,7 +123,7 @@ padding-right: 20%;
         background: rgb(0, 0, 0);
         background: rgba(0, 0, 0, 0.7); /* Black see-through */
         color: #f1f1f1;
-        width: 100%;
+        width: 1080px;
         transition: .5s ease;
         opacity:0;
         color: white;
