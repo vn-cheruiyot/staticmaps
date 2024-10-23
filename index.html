@@ -1,33 +1,186 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Static Maps Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="Images\favicon.png">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caroline Williams | Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+    <!--- Navigation Bar --->
 <body>
-  <div class="navbar">
-    <div class="row">
-      <div class="column">
-        <a href="https://vn-cheruiyot.github.io/portfolio/" style="background-color: #403e3e; margin: 5px; border-radius: 10px;"><b>Home page</b></a> </div>
-    <div  style="background-color: #403e3e; margin: 5px; border-radius: 10px; margin-left: 30px">
-        <a href=#  style="float: left"><b>Static Maps</b></a>
-        <a href=#  style="float: left"><b>Data Visualizations</b></a>
-        <a href=#  style="float: left"><b>Web Maps</b></a></div> 
-    <div style="background-color: #403e3e; margin: 5px; border-radius: 10px; margin-left: 30px"> 
-        <a href=#><b>Contact</b></a></div>
-    <div class="column" style="float:"></div>
+  <nav>
+    <div class="navbar" id="mynavbar">
+      <a href="https://vn-cheruiyot.github.io/portfolio/">HOME</a>
+      <a href="about.html">ABOUT ME</a>
+      <a href="resume.html">RESUME</a>
+      <a href=# class="active">PORTFOLIO</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
+  </nav>
+  <!--- Section 1: Title --->
+  <div class="about_me_title">
+    <div class="about_me_text">
+      <h1>PORTFOLIO</h1>
+    </div>
+  </div>
+<!-- Portfolio Gallery Grid -->
+<div style="background-color: var(--alternative)">
+  <div style="max-width: 1800px; margin: 0 auto !important; float: none !important;">
+  <!--- Section 2a: GIS Portfolio control buttons --->
+  <div class="portfolio_cont">
+  <div id="myBtnContainer">
+    <button class="portbtn portactive" onclick="filterSelection('all')"> Show all</button>
+    <button class="portbtn" onclick="filterSelection('GIS')"> GIS</button>
+    <button class="portbtn" onclick="filterSelection('remotesensing')"> Remote Sensing</button>
+    <button class="portbtn" onclick="filterSelection('webmaps')"> Web Mapping</button>
+        <button class="portbtn" onclick="filterSelection('clark')"> Clark Labs</button>
+    <button class="portbtn" onclick="filterSelection('develop')"> NASA DEVELOP</button>
+  </div>
+<div class="portrow">
+  <div class="portcolumn GIS remotesensing develop">
+    <div class="portcontent">
+      <a href="Maps/1992.gif" target="" class="port_txt">
+        <img src="Maps/1992.gif" alt="NASA DEVELOP PUP Projects" style="width:100%">
+        <h3 style="font-family: 'Montserrat', sans-serif;">NASA DEVELOP PUP Projects</h3>
+        <h4>Image Credit: NASA DEVELOP</h4>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS remotesensing">
+    <div class="portcontent">
+      <a href="Maps/cartography.gif" target="" class="port_txt">
+        <img src="Maps/cartography.gif" alt="Mapping Burn Scars using Google Earth Engine JavaScript API" style="width:100%">
+        <h3 style="font-family: 'Montserrat', sans-serif;">Mapping Burn Scars using Google Earth Engine JavaScript API</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS remotesensing develop">
+    <div class="portcontent">
+      <a href="Maps/Auburn Lakes 1817 and 2019 comparison.png" target="" class="port_txt">
+        <img src="Maps/Auburn Lakes 1817 and 2019 comparison.png" alt="Central America Disasters Project" style="width:100%">
+        <h3 style="font-family: 'Montserrat', sans-serif;">NASA DEVELOP Central America Disasters Fall 2021 Project</h3>
+        <h4>Image Credit: NASA DEVELOP</h4>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS remotesensing develop">
+    <div class="portcontent">
+      <a href="aps/Choropleth.png" target="" class="port_txt">
+        <img src="Maps/Choropleth.png" class alt="Argentina Agriculture Project" style="width:100%">
+        <h3 style="font-family: 'Montserrat', sans-serif;">NASA DEVELOP Argentina Agriculture Summer 2021 Project</h3>
+        <h4>Image Credit: NASA DEVELOP</h4>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS remotesensing clark">
+    <div class="portcontent">
+      <a href="Maps/Choropleth1.png" target="" class="port_txt">
+      <img src="Maps/Choropleth1.png" alt="Clark Labs Pond Aquaculture" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Clark Labs Pond Aquaculture and Mangrove Land Cover Classification</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS remotesensing">
+    <div class="portcontent">
+      <a href="Maps/Dot Density.png" target="" class="port_txt">
+      <img src="Maps/Dot Density.png" alt="WCS Environmental Trends Analysis" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">WCS Environmental Trends Analysis Ruaha & Katavi National Parks</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn webmaps">
+    <div class="portcontent">
+      <a href="Maps/Google Earth Image Great Salt Lake_1.jpg" target="" class="port_txt">
+      <img src="Maps/Google Earth Image Great Salt Lake_1.jpg" alt="USAID Web Mapping Project" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Web Mapping Final Project USAID Prototype</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn webmaps">
+    <div class="portcontent">
+      <a href="Maps/Lab_2_Map.png" target="" class="port_txt">
+      <img src="Maps/Lab_2_Map.png" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Malnutrition & Health Sites in Mali Web Mapping</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn webmaps">
+    <div class="portcontent">
+      <a href="Maps/Lab_7 Choropleth Map Mean Slope_Map.png" target="" class="port_txt">
+      <img src="Maps/Lab_7 Choropleth Map Mean Slope_Map.png" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Studio 4 Web Map</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn webmaps">
+    <div class="portcontent">
+      <a href="Maps/Lab_7 Delaware Counties Choropleth.png" target="" class="port_txt">
+      <img src="Maps/Lab_7 Delaware Counties Choropleth.png" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Studio 3 Web Map</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS">
+    <div class="portcontent">
+      <a href="projects/Vulnerability-Populations-in-Vietnam-to-Tropical-Cyclones.html" target="" class="port_txt">
+      <img src="Maps/Lab_7 Terrain and Impervious Surface Map.png" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Vulnerability of Populations in Vietnam to Tropical Cyclones</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS webmaps">
+    <div class="portcontent">
+      <a href="Maps/LabelsasSymbols.gif" target="" class="port_txt">
+      <img src="Maps/LabelsasSymbols.gif" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Eastern Hemlock Species Distribution Model Web Map</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS">
+    <div class="portcontent">
+      <a href="Maps/NAROK BOMET.png" target="" class="port_txt">
+      <img src="Maps/NAROK BOMET.png" alt="People" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Electric Vehicle Spatial Analysis with R</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS">
+    <div class="portcontent">
+      <a href="Maps/Option A Rev1_page-0001.jpg" target="" class="port_txt">
+      <img src="Maps/Option A Rev1_page-0001.jpg" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Specied Distribution Model: Papio anubis and Papio hamadryas</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS clark">
+    <div class="portcontent">
+      <a href="Maps/Option B Rev2_page-0001.jpg" target="" class="port_txt">
+      <img src="Maps/Option B Rev2_page-0001.jpg" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Clark Labs ESRI Global Land Cover Change Vulnerability and Prediction Mapping</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS clark">
+    <div class="portcontent">
+      <a href="Maps/Small Multiple map.jpg" target="" class="port_txt">
+      <img src="Maps/Small Multiple map.jpg" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Clark Labs ESRI Global Land Cover Change Vulnerability and Prediction Mapping</h3>
+      </a>
+    </div>
+  </div>
+  <div class="portcolumn GIS clark">
+    <div class="portcontent">
+      <a href="Maps/Stretch.png" target="" class="port_txt">
+      <img src="Maps/Stretch.png" alt="Car" style="width:100%">
+      <h3 style="font-family: 'Montserrat', sans-serif;">Clark Labs ESRI Global Land Cover Change Vulnerability and Prediction Mapping</h3>
+      </a>
+    </div>
+  </div>
 </div>
+<<<<<<< Updated upstream
     <div class="main">
         <h2 style="text-align: center; padding:40px;">Cheruiyot Vincent - Static Map Portfolio</span></h2>
      <br>
@@ -125,7 +278,36 @@
                     <i> Produced in ArcGIS. Data Sourced from Living Atlas.</i></div>
                     </a></div></div>
 	</div>
+=======
+<!-- END GRID -->
+</div>
+</div>
+</div>
+  <!--- Section 3: Contact Information --->
+  <div class="about_me_interests_cont_pg2">
+    <div class="about_me_interests_pg2">
+      <br>
+      <h2 style="font-family: 'Montserrat', sans-serif;">Contact</h2>
+      <br>
+      <p>Please feel free to contact me at my email address or through my LinkedIn Account below.</p>
+      <br>
+      <h2 style="font-family: 'Montserrat', sans-serif;">Email</h2>
+      <br>
+      <p>cheruiyot.vincent.n@gmail.com</p>
+      <br>
+>>>>>>> Stashed changes
     </div>
-    </div>
-</body>
+  </div>
+  <!--- Footer --->
+  <div class="top_footer">
+    <p style="font-size: 24px; font-family: 'Montserrat', sans-serif;">Contact Me</p>
+    <!-- <a href="https://www.linkedin.com/in/caroline-ann-williams/"><i class="fa fa-linkedin"></i></a> -->
+    <!-- <a href="https://github.com/cawilliams719"><i class="fa fa-github"></i></a> -->
+  </div>
+  <div class="bottom_footer">
+    <p><small>&copy; Copyright 2024, Cheruiyot Vincent</small></p>
+  </div>
+  <script src="filter.js"></script>
+  <script src="icon.js"></script>
+  </body>
 </html>
