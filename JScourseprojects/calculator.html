@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!--   <style>
+        body {
+background: black;
+}
+.calc {
+position:absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+color: #17D4FE;
+font-size: 60px;
+font-family: Orbitron;
+letter-spacing: 7px;
+
+}
+    </style>-->
+<link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+<!-- Create Divs for results numbers and initials -->
+ 
+<div  id="type-bar" class="type-bar"> Enter your calculation </div>
+<div class="calc">
+    <div class = "calc-item"><button onclick = "myFunction7()">7</button></div>
+    <div class = "calc-item"><button onclick = "myFunction8()">8</button></div>
+    <div class = "calc-item"><button onclick = "myFunction9()">9</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionAdd()">+</button></div>
+    <div class = "calc-item"><button onclick = "myFunction4()">4</button></div>
+    <div class = "calc-item"><button onclick = "myFunction5()">5</button></div>
+    <div class = "calc-item"><button onclick = "myFunction6()">6</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionMinus()">-</button></div>
+    <div class = "calc-item"><button onclick = "myFunction1()">1</button></div>
+    <div class = "calc-item"><button onclick = "myFunction2()">2</button></div>
+    <div class = "calc-item"><button onclick = "myFunction3()">3</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionMultiply()">x</button></div>
+    <div class = "calc-item"><button onclick = "myFunction0()">0</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionDot()">.</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionDivide()">÷</button></div> 
+    <div class = "calc-item"><button onclick = "myFunctionEquals()">=</button></div>
+    <div class = "calc-item"><button onclick = "location.reload()">Clear</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionOpen()">(</button></div>
+    <div class = "calc-item"><button onclick = "myFunctionClose()">)</button></div>
+</div>
+<script src = "calculator.js"></script>
+</body>
+</html>
