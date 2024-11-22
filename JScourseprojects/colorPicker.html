@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+
+    <link rel="stylesheet" href="colorPicker.css">
+</head>
+<body>
+    <div class = "text-bar">
+        <div>
+            <div>
+                <input  type = "text" id="RGB" class = "result-box" value = "RGB">
+                <button  class = "button" onclick = "copyRGB()"> COPY RGB</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input  type = "text" id="HEX" class = "result-box" value = "HEX">
+                <button  class = "button" onclick = "copyHEX()"> COPY HEX</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input  type = "text" id="CMYK" class = "result-box" value = "CMYK">
+                <button  class = "button" onclick = "copyCMYK()"> COPY CMYK</button>
+            </div>
+        </div>
+    </div>
+    <div class = "myContainer">
+        <div onclick = "colorRed()" style=" background-color: red;"> <h1>Red</h1></div>
+        <div onclick = "colorGreen()" style=" background-color: green;"> <h1>Green</h1></div>
+        <div onclick = "colorBlue()" style=" background-color: blue;"> <h1>Blue</h1></div>
+        <div onclick = "colorYellow()" style=" background-color: yellow;"><h1>Yellow</h1></div>
+        <div onclick = "colorMagenta()" style=" background-color: magenta;"> <h1>Magenta</h1></div>
+        <div onclick = "colorCyan()" style=" background-color: cyan;"> <h1>Cyan</h1></div>
+
+
+    </div>
+    <script src="colorPicker.js"></script>
+</body>
+</html>
