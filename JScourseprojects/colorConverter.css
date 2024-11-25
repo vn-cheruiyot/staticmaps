@@ -1,0 +1,26 @@
+.navbar {
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--main);
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 15px;
+    color: #17D4FE;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: black;
+}
+.colorConv {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 12px;
+    font-family: Orbitron;
+    letter-spacing: 1px;
+}; 

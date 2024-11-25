@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="colorConverter.css">
+        <title>Color Converter</title>
+    </head>
+<body> 
+    <nav>
+        <nav>
+            <div class="navbar">
+              <a href="https://vn-cheruiyot.github.io/staticmaps/">HOME</a> <br>
+              <a href="colorPicker.html">Color Picker</a>
+              <!-- <a href="resume.html">RESUME</a> -->
+              <!-- <a href=# class="active">PORTFOLIO</a> -->
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </nav>
+    </nav>
+<div class = "colorConv">  
+    <div>
+        <a href="colorPicker.html">Pick a Color instead</a>
+        <h1> HEX to RGB </h1>
+        <p> <i> start with # </i></p>
+        <input type = "text"  value = "FFFFFF" id ="hexInput"> 
+        <button class = "button" onclick ="hextoRGB()" id = "RGB"> Convert to  RGB </button><br>
+        <input type = "text"  value = "R: 255 G: 255 B: 255" id = "rgbValue">
+        <button class = "button" onclick ="copyRGB()"> Copy RGB </button>
+    </div>
+    <div>
+        <h1 id = "demo"> RGB to HEX </h1>
+        <p><i> Format: R: 255 G: 255 B: 255 <br> "R" colon, <b>space</b>, value, <b>space</b>"G" colon, <b>space</b>, value, <b>space</b> "B" colon, <b>space</b>, value </i></p>
+        <input type = "text"  value = "R: 255 G: 255 B: 255" id ="rgbInput"> 
+        <button class = "button" onclick ="rgbtoHex()" id = "RGB"> Convert to HEX </button><br>
+        <input type = "text"  value = "FFFFFF" id = "hexValue">
+        <button class = "button" onclick ="copyHex()"> Copy HEX </button>   
+    </div>
+</div>
+<script src = "colorConverter.js"></script>
+<b></b>
+</body>
+</html>

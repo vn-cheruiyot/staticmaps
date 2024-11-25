@@ -1,29 +1,10 @@
+// create objects to access and modify boxes that will contain te color codes
 let rgbBar = document.getElementById("RGB")
 let hexBar = document.getElementById("HEX")
 let cmykBar = document.getElementById("CMYK")
 
-function copyRGB () {
-    var mytext = document.getElementById("RGB");
-    mytext.select();
-    mytext.setSelectionRange(0,99999);
-    navigator.clipboard.writeText(mytext.value);
-    alert(`Copied the text: ${mytext.value}`)
-}
-function copyHEX () {
-    var mytext = document.getElementById("HEX");
-    mytext.select();
-    mytext.setSelectionRange(0,99999);
-    navigator.clipboard.writeText(mytext.value);
-    alert(`Copied the text: ${mytext.value}`)
-}
-function copyCMYK () {
-    var mytext = document.getElementById("CMYK");
-    mytext.select();
-    mytext.setSelectionRange(0,99999);
-    navigator.clipboard.writeText(mytext.value);
-    alert(`Copied the text: ${mytext.value}`)
-}
-
+// Create functions for every color in the grid to change the value of ther color code boxes
+// I use the value property of HTML DOM
 function colorRed(){
     rgbBar.value = `R: 255, G: 0, B: 0`;
     hexBar.value = `#FF0000`;
@@ -54,4 +35,26 @@ function colorCyan(){
     hexBar.value = `#00FFFF`;
     cmykBar.value = `C: 100%, M: 0%, Y: 100%, K: 0%`;
     };
-        
+   
+/* 3. COPY THE TEXT IN TO clip board*/
+// create 3 functions to copy the text in the text box when the user clicks the button copy
+function copyRGB () {
+    rgbBar.select();
+    rgbBar.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(rgbBar.value);
+    alert(`Copied the text: ${rgbBar.value}`)
+}
+function copyHEX () {
+    hexBar.select();
+    hexBar.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(hexBar.value);
+    alert(`Copied the text: ${hexBar.value}`)
+}
+function copyCMYK () {
+    cmykBar.select();
+    cmykBar.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(cmykBar.value);
+    alert(`Copied the text: ${cmykBar.value}`)
+}
+
+  
