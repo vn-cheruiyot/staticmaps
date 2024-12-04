@@ -26,7 +26,7 @@ function colorYellow(){
     cmykBar.value = `C:0, M:0.13, Y:0.87, K:0`;
     };
 function colorMagenta(){
-    rgbBar.value = `RL255, G:0, B:255`;
+    rgbBar.value = `R: 255, G:0, B:255`;
     hexBar.value = `#ff00ff`;
     cmykBar.value = `C: 0%, M: 100%, Y: 0%, K: 0%`;
     };
@@ -56,5 +56,3 @@ function copyCMYK () {
     navigator.clipboard.writeText(cmykBar.value);
     alert(`Copied the text: ${cmykBar.value}`)
 }
-
-  

@@ -1,8 +1,16 @@
-let hexBar = document.getElementById("hexValue")
-let rgbBar = document.getElementById("rgbValue")
+
+//let rgbBar = document.getElementById("rgbValue")
 let bg = ``;
 /* HEX to RGB */ 
-function  hexChecker (x){
+function hexConverter (){
+	let x =  document.getElementById("hexInput").value;
+	let r =parseInt(`0x${x.slice(0,2)}`, 16);
+	let g =parseInt(`0x${x.slice(2,4)}`, 16);
+	let b =parseInt(`0x${x.slice(4,)}`, 16);
+	bg =`#${x}`;
+	document.getElementById("rgbValue").value = `R: ${r} G: ${g} B: ${b}`
+}
+/* function  hexChecker (){
 	switch (x){
 		   case '1':
 		   x = 1
@@ -66,9 +74,10 @@ function hextoRGB(){
 	bg =`#${hexValue}`
 	document.getElementById("rgbValue").value = rgb
 	
-};
+}; */
 
 function copyRGB(){
+	let rgbBar = document.getElementById("rgbValue")
 	rgbBar.select();
     rgbBar.setSelectionRange(0,99999);
     navigator.clipboard.writeText(rgbBar.value);
@@ -84,21 +93,25 @@ function toHex(x){
 	};
 function rgbtoHex () {
 	let rgbValue = document.getElementById("rgbInput").value; // get value of the input
+	
+	/* Search for indices of the letters R, G, and B*/
 	//let rIndex = rgbValue.search(/R/)
-	let gIndex = rgbValue.search(/G/)
+	let gIndex = rgbValue.search(/G/) 
 	let bIndex = rgbValue.search(/B/)
 
+/*Using the index postions of R, G and B to select the number values*/
 	let rValue = rgbValue.slice(3,(gIndex-1))
 	let gValue = rgbValue.slice((gIndex +3),(bIndex-1))
 	let bValue = rgbValue.slice((bIndex +3),);
 	
-
+/* Conert the select numbers to hexadecimal using the function created above*/
 	let hexR = toHex(rValue)
 	let hexG = toHex(gValue)
 	let hexB = toHex(bValue)
-	let Hex = `${hexR}${hexG}${hexB}`.toUpperCase()
-	bg =`#${Hex}`
-	document.getElementById("hexValue").value = Hex
+	let Hex = `${hexR}${hexG}${hexB} `.toUpperCase()
+	let Hex1 = `${toHex(rValue)}${toHex(gValue)}${toHex(bValue)}`.toUpperCase()
+	bg =`#${Hex}` //
+	document.getElementById("hexValue").value = Hex1
 	//document.body.style.backgroundColor = `#${Hex}`
 
 	
@@ -106,6 +119,7 @@ function rgbtoHex () {
 }
 
 function copyHex(){
+let hexBar = document.getElementById("hexValue")
 	hexBar.select();
     hexBar.setSelectionRange(0,99999);
     navigator.clipboard.writeText(hexBar.value);

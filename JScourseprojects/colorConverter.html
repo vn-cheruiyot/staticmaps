@@ -11,7 +11,7 @@
         <nav>
             <div class="navbar">
               <a href="https://vn-cheruiyot.github.io/staticmaps/">HOME</a> <br>
-              <a href="colorPicker.html">Color Picker</a>
+              <a href="colorPicker.html">Pick Color</a>
               <!-- <a href="resume.html">RESUME</a> -->
               <!-- <a href=# class="active">PORTFOLIO</a> -->
               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -22,11 +22,15 @@
     </nav>
 <div class = "colorConv">  
     <div>
-        <a href="colorPicker.html">Pick a Color instead</a>
-        <h1> HEX to RGB </h1>
-        <p> <i> start with # </i></p>
+        <!-- <a href="colorPicker.html" >Pick a Color instead</a> -->
+        <h1 id="demo"> HEX to RGB </h1>
+        <p> <i> Do not include <b>#</b> </i></p>
+        <p><i>
+            <h3 style="text-decoration-line: line-through; color: red;"> #FFFFFF</h3>
+            <h3 style="color: green;">FFFFFF</h3>
+        </i></p>
         <input type = "text"  value = "FFFFFF" id ="hexInput"> 
-        <button class = "button" onclick ="hextoRGB()" id = "RGB"> Convert to  RGB </button><br>
+        <button class = "button" onclick ="hexConverter()" id = "RGB"> Convert to  RGB </button><br>
         <input type = "text"  value = "R: 255 G: 255 B: 255" id = "rgbValue">
         <button class = "button" onclick ="copyRGB()"> Copy RGB </button>
     </div>
