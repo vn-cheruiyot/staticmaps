@@ -1,0 +1,65 @@
+nav{
+    width: 100%;
+    height: fit-content;
+    color: #17D4FE;
+    font-size: 30px;
+    font-family: Orbitron;
+
+}
+a{
+    position:relative;
+    color:#17D4FE;
+    text-decoration: none;
+}
+input{
+    color: #17D4FE;
+    background: scroll;
+    font: Orbitron;
+    font-size: 30;
+    border: none;
+    border-bottom: 10px #17D4FE;
+}
+body {
+    background: rgb(0, 0, 0);
+    color: #000000;
+
+
+}
+textarea {
+    height: 150px;
+}
+
+
+ .stopwatch {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+.inputs {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size:large;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+}
+button{
+    background-color: #000000;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size:large;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+}
