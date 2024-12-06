@@ -51,7 +51,7 @@ textarea {
     letter-spacing: 7px;
    
 }
-button{
+/*button{
     background-color: #000000;
     position:absolute;
     top: 50%;
@@ -60,6 +60,48 @@ button{
     color: #17D4FE;
     font-size:large;
     font-family: Orbitron;
-    letter-spacing: 7px;
+    letter-spacing: 7px; 
+} */
+button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+ul {
+   position: fixed;
+   top: 0;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width : 60px;
+   background-color: #dddddd;
+}
+li {
+   display: inline;
    
+}
+li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  text-align:center;
+}
+
+/* Show the tab that the use is active in */
+
+.active {
+   background-color: #04AA6D;
+   color: white;
+}
+
+/* Make the container a grid container to house the three input values*/
+
+.grid-container {
+   display: grid;
+   grid-template-columns: 100%
 }
