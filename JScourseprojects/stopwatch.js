@@ -9,7 +9,7 @@
             } else if (hour > 23 || minute > 59 || seconds > 59) {
                 alert ("Hour should be less than 24 <br> Minutes and seconds should be less than 60") 
             } else{
-               document.getElementById("grid-container").style.display = "none";
+               document.getElementById("input").style.display = "none";
                const milliseconds = hour*3.6e6 + minute*60000 + seconds*1000;
                const target = milliseconds + Date.parse(new Date())
                myInterval = setInterval ( function(){
@@ -18,6 +18,12 @@
                 let h = Math.floor(t/3.6e6)
                 let m = Math.floor((t%3.6e6)/60000)
                 let s = Math.floor(((t%3.6e6)%60000)/1000)
+                
+                h = (h<10)?h=`0${h}`: h;
+                m = (m<10)?m=`0${m}`: m;
+                s = (s<10)?s=`0${s}`: s;
+
+
 
 
                 document.getElementById("stopwatch").innerText = `${h} : ${m} : ${s}`;

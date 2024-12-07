@@ -24,11 +24,6 @@ body {
   color:rgb(0, 0, 0)
 }
 
-.active {
-    color:#17D4FE;
-    background-color:#000000;
- }
-
  #grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -44,6 +39,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    border-radius: 10%;
   }
 
   input {
@@ -55,62 +51,43 @@ body {
     border-bottom: 10px #17D4FE;
     width: 40px;
 }
-.stopwatch {
-    position:absolute;
-    /*top: 50%;
+/* .container {
+    position:relative;
+}*/
+.stopwatchcontainer{
+   /* margin: auto;
+    width:50%;
+    padding: 10px; */
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+}
+/*.stopwatch {
+     position:relative;
+    top: 50%;
     left: 50%;
-     transform: translateX(-50%) translateY(-50%); */
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%); 
     color: #17D4FE;
     font-size: 100px;
     font-family: Orbitron;
-}
-
-/* nav{
-    width: 100%;
-    height: fit-content;
-    color: #17D4FE;
-    font-size: 30px;
-    font-family: Orbitron;
-
-}
-a{
-    position:relative;
-    color:#17D4FE;
-    text-decoration: none;
-}
-
-body {
-    background: rgb(0, 0, 0);
-    color: #17D4FE;
-    height:100%
-
-
-}
-textarea {
-    height: 150px;
-}
-
-
-
-.inputs {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
-    font-size:large;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-   
-}
-button{
-    background-color: #000000;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
-    font-size:large;
-    font-family: Orbitron;
-    letter-spacing: 7px; 
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 } */
+ p {
+    font: Orbitron;
+    font-size: 70px;
+    align-self: center; 
+ }
+.stopwatchcontainer p {
+   
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate (-50%, -50%);
+}
