@@ -1,7 +1,6 @@
 body {
     background: rgb(0, 0, 0);
     color: #17D4FE;
-    height:100%
 }
 
 .nav {
@@ -9,11 +8,14 @@ body {
     background-color: #17D4FE;
     font : Orbitron;
     font-size: 20px;
-}
+     position: sticky;
+    /*margin-top: 0px; */
+    }
 
 .nav li {
     display: inline-block;
     font-size: 20px;
+    /* position: absolute; */
 }
 
 .nav li a {
@@ -28,6 +30,8 @@ body {
     display: grid;
     grid-template-columns: 100%;
     font-size: 40px;
+    margin: auto;
+    position: absolute;
  }
 
  button {
@@ -36,29 +40,49 @@ body {
     color: rgb(0, 0, 0);
     padding: 15px 20px;
     text-align: center;
+    font: Orbitron;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
     border-radius: 10%;
+    margin:auto
   }
 
   input {
     color: #17D4FE;
     background: scroll;
     font: Orbitron;
-    font-size: 30px;
+    font-size: 50px;
     border: none;
     border-bottom: 10px #17D4FE;
-    width: 40px;
+    width: 60px;
+    position:absolute
 }
 /* .container {
     position:relative;
 }*/
+.restartButton{
+    /* margin: auto;
+     width:50%;
+     padding: 10px; */
+     margin:auto;
+     height: 25%px;
+     position: relative;
+     border: 3px solid green;
+ }
+.stopwatchDiv{
+    /* margin: auto;
+     width:50%;
+     padding: 10px; */
+     height: 200px;
+     position: relative;
+     border: 3px solid green;
+ }
 .stopwatchcontainer{
    /* margin: auto;
     width:50%;
     padding: 10px; */
-    height: 200px;
+    height: 75%;
     position: relative;
     border: 3px solid green;
 }

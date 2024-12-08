@@ -3,15 +3,17 @@
             const minute = document.getElementById("minute").value
             const seconds = document.getElementById("seconds").value
             
-
             if (hour == 0 & minute == 0 & seconds == 0){
                 alert ("You must Input time")
             } else if (hour > 23 || minute > 59 || seconds > 59) {
                 alert ("Hour should be less than 24 <br> Minutes and seconds should be less than 60") 
             } else{
-               document.getElementById("input").style.display = "none";
+                document.getElementById("restartButton").style.display= "block"
+                document.getElementById("input").style.display = "none";
                const milliseconds = hour*3.6e6 + minute*60000 + seconds*1000;
-               const target = milliseconds + Date.parse(new Date())
+               const target = milliseconds + Date.parse(new Date());
+                 //Add a retart button
+
                myInterval = setInterval ( function(){
                const leo = Date.parse(new Date())
                 let t = target - leo
@@ -24,13 +26,23 @@
                 s = (s<10)?s=`0${s}`: s;
 
 
+                document.getElementById("stopwatch").innerText = `${h} : ${m} : ${s}
+                `;
+                // //Add a retart button
+                // const x = document.getElementById("restartButton")
+                // var button = document.createElement("button");
+                // var buttonText = document.createTextNode("Restart");
+                // button.className = "restart"
+                // button.appendChild(buttonText)
+                // x.appendChild(button)
 
 
-                document.getElementById("stopwatch").innerText = `${h} : ${m} : ${s}`;
+
+                // Alert when to timer gets to zero
                 if (t <= 0){
                     clearInterval(myInterval)
                     alert ("Time is up my nigger")
-                    
+                    location.reload  
                 }
                            },1000)
                 }; }
