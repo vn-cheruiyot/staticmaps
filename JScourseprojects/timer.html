@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="stopwatch.css">
+<link rel="stylesheet" href="timer.css">
 </head>
 <body>
     <ul class = "nav">
 
         <li><a href="https://vn-cheruiyot.github.io/staticmaps">Home</a></li>
         <li><a href="#">Stopwatch</a></li>
-        <li><a href="https://vn-cheruiyot.github.io/staticmaps/JScourseprojects\time.html">Clock</a></li>
+        <li><a href="https://vn-cheruiyot.github.io/staticmaps/JScourseprojects\clock.html">Clock</a></li>
     </ul>
-    <div>
-        <div id="input">
-    <div id = "grid-container">
+    <div id = "inputs">
+        <div id="input-div">
         <div>
             <span>H</span>
             <input type="text" id="hour" value="00">
@@ -20,19 +19,20 @@
         <div>
             <span>M</span>
             <input type="text" id="minute" value="00">
-            </div>
+        </div>
        <div>
             <span>S</span>
             <input type="text" id="seconds" value="00">
        </div>
+       </div>
        <div>
-            <button onclick= "myTimer()" >Start</button>
+            <button id = "startbutton" onclick= "myTimer()" >Start</button>
        </div>
     </div>
 </div>
-        <div id = "stopwatchcontainer">
-           <div id = "stopwatchDiv"> 
-                 <p id = "stopwatch"></p>
+        <div id = "timer-div">
+           <div> 
+                 <p id = "timer"></p>
             </div>
             <div id = "restartButton" style=" display:none;">
                 <a href="https://vn-cheruiyot.github.io/staticmaps/JScourseprojects/stopwatch.html">
@@ -40,8 +40,7 @@
                 </a>
             </div>
         </div>
-    </div>
 
-    <script src="stopwatch.js"></script>
+    <script src="timer.js"></script>
 </body>
 </html>
