@@ -4,11 +4,12 @@ function mycalc(x){
   document.getElementById("input").value = v;
 }
 function myeval(){
-  v = eval(v).toFixed(4)
+  v = eval(v)
   if (isNaN(v)){
     document.getElementById("input").value = "Syntax Error"; 
   } else {
-   document.getElementById("input").value = v; 
+    v = eval(v).toFixed(4);
+    document.getElementById("input").value = v; 
   } 
 }
 function myDel(){
