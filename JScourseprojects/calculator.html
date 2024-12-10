@@ -4,26 +4,29 @@
         <link rel="stylesheet" href="calculator.css">
     </head>
   <body>
-    <input id = "input" value = "Enter numbers">
+    <div id="input-div">
+      <input id = "input" value = "Enter numbers">
+    </div>
+    
     <div id = "grid-container">
       <div onclick= "location.reload()" id ="keys-special">C</div>
       <div onclick = "mypercentage()" id ="keys">%</div>
       <div onclick= "myDel()" id ="keys-special">Del</div>
-      <div onclick = mycalc("/") id ="keys">÷</div>
-      <div onclick = mycalc(7) id ="keys">7</div>
-      <div onclick = mycalc(8) id ="keys">8</div>
-      <div onclick = mycalc(9) id ="keys">9</div>
+      <div onclick = mycalc('/') id ="keys">÷</div>
+      <div onclick = mycalc('7') id ="keys">7</div>
+      <div onclick = mycalc("8") id ="keys">8</div>
+      <div onclick = mycalc("9") id ="keys">9</div>
       <div onclick = mycalc("*") id ="keys">x</div>
-      <div onclick = mycalc(4) id ="keys">4</div>
-      <div onclick = mycalc(5) id ="keys">5</div>
-      <div onclick = mycalc(6) id ="keys">6</div>
+      <div onclick = mycalc("4") id ="keys">4</div>
+      <div onclick = mycalc("5") id ="keys">5</div>
+      <div onclick = mycalc("6") id ="keys">6</div>
       <div onclick = mycalc("-") id ="keys">-</div>
-      <div onclick = mycalc(1) id ="keys">1</div>
-      <div onclick = mycalc(2) id ="keys">2</div>
-      <div onclick = mycalc(3) id ="keys">3</div>
+      <div onclick = mycalc("1") id ="keys">1</div>
+      <div onclick = mycalc("2") id ="keys">2</div>
+      <div onclick = mycalc("3") id ="keys">3</div>
       <div onclick = mycalc("+") id ="keys">+</div>
-      <div id ="keys">Sci</div>
-      <div onclick = mycalc(0) id ="keys">0</div>
+      <div onclick = mysci() id ="keys">Sci</div>
+      <div onclick = mycalc("0") id ="keys">0</div>
       <div onclick = mycalc(".") id ="keys">.</div>
       <div onclick = myeval() id ="keys">=</div>
     </div>
