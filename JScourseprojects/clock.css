@@ -1,43 +1,43 @@
 body {
     background: rgb(0, 0, 0);
     color: #17D4FE;
-    height:100%
-}
-.clock {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
-    font-size: 60px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-   
+    height:100%;
+    font: Orbitron; 
 } 
+#time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    }
 
 
 .nav {
-    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type:none;
     background-color: #17D4FE;
-    font : Orbitron;
-    font-size: 20px;
 }
-
-.nav li {
-    display: inline-block;
-    font-size: 20px;
+li {
+    list-style-type:none;
+    padding: 5px;
 }
-
-.nav li a {
+a {
   display: block;
   padding: 8px;
   text-decoration: none;
   text-align:center;
-  color:rgb(0, 0, 0)
+  color:rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .active {
     color:#17D4FE;
     background-color:#000000;
+ }
+ div{
+    display: flex;
+    flex-direction: column;
  }
 
