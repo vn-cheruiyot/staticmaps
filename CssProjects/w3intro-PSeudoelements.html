@@ -1,0 +1,190 @@
+<DOCTYPE! html>
+<head>
+<!-- ***Add Google font***
+To add a google font, start with a base api url googleapis.com/css
+add font family specifying the font's styles styles using a colon and commas between each style
+Separate fonts using a pipe (\) oprator
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Garamond:ExtraBold,Italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+<style>
+body{
+background: rgb(0,0,255,0.2)
+}
+.navbar ul li:hover{
+font: bold 1.5 Helvetica;
+color: white;
+background: black;
+}
+.navbar{
+margin:auto;
+width: 80%;
+font: bold 1.25em  Helvetica;
+}
+.navbar ul{
+list-style:none;
+/*border: dashed 1px  #00aa00;*/
+width: 100%
+padding: 10px;
+box-sizing: border-box;
+}
+.navbar li{
+display: inline-block;
+padding: 10px 10px;
+/*border: solid 1px green;*/
+width: 31%;
+box-sizing: border-box;
+text-align: center;
+/*background: #00ee00*/
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 10,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+table{
+/*border: 1px solid;*/
+width:75%;
+border-collapse: collapse;
+margin:auto;
+/*
+cell-padding: 100px;
+cell-spacing: 100px;
+border-collapse: collapse;
+*/
+}
+th,td {
+border-bottom:1px solid;
+vertical-align: middle;
+text-align: center;
+padding: 20px;
+}
+.title {
+font: bold italic 4em Garamond;
+color: #000000;
+/*background: #ffddee;*/
+padding: 1px 25px;
+width: 100%;
+margin: auto;
+text-align: center;
+/*border: dotted 1px red;*/
+}
+.title p {
+display: none;
+font: 0.3em Garamond;
+}
+.title:hover p {
+display:block;
+font: 0.3em Garamond;
+/*background: black;*/
+color:black;
+width:30%;
+margin:auto;
+}
+
+.text{
+margin: auto;
+max-width: 80%;
+font: 1.5em Garamond;
+padding: 0px 25px;
+text-align-last: center;
+}
+.text p::first-line {
+font: bold 1.4em Garamond;
+}
+.text p::first-letter {
+font: bold 1.9em Garamond;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.images div{
+/*border: dashed 1px blue;*/
+width: 10%;
+box-sizing : border-box;
+}
+.images{
+box-sizing: border-box;
+width: 80%
+margin: auto;
+padding: 0 20%;
+/*border: dashed 1px red;*/
+}
+img{
+display: block;
+margin:auto;
+max-width:50%;
+object-fit:contain;
+/*border: dashed 2px red;*/
+}
+.image{
+margin:auto;
+max-width:80%
+/*border: dashed 4px red;*/
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<ul>
+<li><span >Home</span></li>
+<li>Contact</li>
+<li>Away</li>
+</ul></div>
+<div class="title">
+Cheruiyot Vincent
+<!--<p> big bright boy</p> -->
+</div>
+<div class="image">
+<img src="https://www.python.org/static/img/python-logo-large.c36dccadd999.png?1646853871" alt="Paris" width="300" height="300">
+</div>
+<div class="text">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+<span class="material-symbols-outlined">favorite</span>
+Fusce sit amet massa ac tortor semper convallis non at dui. Phasellus faucibus lacus et tellus suscipit varius. Ut sit amet massa leo. Nullam vulputate rhoncus lorem non rutrum. Vestibulum imperdiet tincidunt mi vitae imperdiet. Praesent bibendum hendrerit sapien nec semper. Suspendisse bibendum lectus nec ligula rutrum, nec porta ligula dapibus. Praesent tempor enim quis finibus dignissim. Quisque ut sollicitudin ante, at pellentesque metus. Etiam imperdiet luctus libero, non laoreet mi vestibulum a. Phasellus id urna vel ex efficitur viverra. Curabitur non metus mauris. Aenean at lectus a est pulvinar aliquam. Quisque odio sapien, tristique quis eros nec, posuere consectetur felis. Vivamus ultrices accumsan eros, non vehicula risus mattis ac. Suspendisse potenti.
+Fusce lacinia fermentum mi. Morbi pulvinar tristique leo, non venenatis libero condimentum vel. Mauris tincidunt ante a mi scelerisque, ac venenatis lacus tempus. Fusce vulputate sed ex ut porta. Pellentesque quam erat, mollis eget dui sit amet, elementum bibendum orci. In luctus malesuada feugiat. Vestibulum mollis nulla neque, et commodo nunc tincidunt a. Nullam a diam pharetra, venenatis ante eu, feugiat lectus. Ut rhoncus neque urna, quis vehicula leo varius eget. Pellentesque placerat mi quis dolor elementum dapibus.</p>
+</div>
+<div class = "images">
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<div class="material-symbols-outlined">favorite</div>
+<!--insert 3 images-->
+</div>
+<div>
+<table>
+	<tr>
+		<th>Item</th>
+		<th>Value</th>
+	    <th>Item</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td> Vincent Cheruiyot</td>
+		<td>Name</td>
+		<td> Vincent Cheruiyot</td>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td> Vincent Cheruiyot</td>
+		<td>Name</td>
+		<td> Vincent Cheruiyot</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    
+html {
+  font-family: "Lucida Sans", sans-serif;
+ 
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  width: 100%;
+  height:50px;
+  background: black;
+  color: #17D4FE;
+  font-size: large;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 2px solid #17D4FE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25%;
+  margin: 2px
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 20%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.square{
+    width:heigth;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+</head>
+<body>
+   <div id = "container">
+  <div class="col-12" style = "border: none">
+    <input id = "input" value = "Input Text">
+  </div>
+<div>
+  <div onclick = 'myclear()' class = "col-3 square">C</div>
+  <div onclick = 'mypercent()' class = "col-3">%</div>
+  <div onclick = 'mydelete()' class = "col-3">Del</div>
+  <div onclick = 'mykey("/")' class = "col-3">/</div>
+  <div onclick = 'mykey(7)' class = "col-3">7</div>
+  <div onclick = 'mykey(8)' class = "col-3">8</div>
+  <div onclick = 'mykey(9)' class = "col-3">9</div>
+  <div onclick = 'mykey("*")' class = "col-3">x</div>
+  <div onclick = 'mykey(4)' class = "col-3">4</div>
+  <div onclick = 'mykey(5)' class = "col-3">5</div>
+  <div onclick = 'mykey(6)' class = "col-3">6</div>
+  <div onclick = 'mykey("-")' class = "col-3">-</div>
+  <div onclick = 'mykey(1)' class = "col-3">1</div>
+  <div onclick = 'mykey(2)' class = "col-3">2</div>
+  <div onclick = 'mykey(3)' class = "col-3">3</div>
+  <div onclick = 'mykey("+")' class = "col-3">+</div>
+  <div onclick = 'alert("Coming Soon")' class = "col-3">Sci</div>
+  <div onclick = 'mykey("0")' class = "col-3">0</div>
+  <div onclick = 'mykey(".")' class = "col-3">.</div>
+  <div onclick = 'myequals()' class = "col-3">=</div>
+  </div>
+    </div>
+    <script>
+let v = ""
+let val = document.getElementById("input")
+function myclear(){
+  val.value =''
+};
+
+function mypercent(){
+    try{
+    v = (eval(v))*100
+    val.value = v
+    }catch(err){
+        val.value = "Syntax Error"
+    }
+  v= (eval(v))*100;
+  (isNAN(v))?val = "Syntax Error":val.value= v
+}
+function mydelete(){
+  v = v.slice(0,-1);
+  val.value = v
+}
+function mykey(x){
+  v += x;
+  val.value = v
+}
+function myequals(){
+    try{
+    v = eval(v)
+    val.value = v
+    } catch(err){
+        alert("Syntax Error")
+    }
+}
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,275 @@
+<DOCTYPE! html>
+<head>
+<style>
+body{
+  background:orange;
+}
+
+*{
+  box-sizing: border-box;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding:15px;
+  border:3px  dashed red;
+}
+#inputs{
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+input[type=text]{
+  width:100%;
+  border : none;
+  text-align: center;
+  font: normal normal 2.5vw verdana;
+}
+input[type=range]{
+  width:100%;
+  padding: 0;
+  text-align: center;
+  border:7px solid red;
+  }
+#button{
+  width:100%;
+  color:black;
+  /*margin: 0 60px;*/
+  /*border: 3px solid black;*/
+  /*padding: 3px;*/
+  text-align: center;
+  font: normal normal 3vw lucida;
+}
+
+h3{
+  font-size: 3vw;
+}
+h1{
+text-align: center;
+font-family: Helvetica serif "sans serif";
+font-size: 4vw;
+}
+.row{
+border: 1px solid black; 
+}
+</style>
+</head>
+<body>
+<div class = "row">
+  <div class = "col-12">
+  <h1 id = "title" class = "title">COLOR CONVERTER</h1></div>
+</div>
+<div id="mid">
+  <div class = "row">
+  <div class = "col-4">
+    <input readonly id="rgbBar" type="text" value="rgb(0,0,0)">
+    <div id ="button" onclick="copyRGB()">Copy</div>
+  </div> 
+  <div class = "col-4">
+    <input readonly class="inputs" id="hexBar" type="text" value="#000000">
+    <div id = "button" onclick="copyHEX()">Copy</div>
+  </div> 
+  <div class = "col-4">
+    <input readonly id = "hslBar" type="text" value="hsl(120,100%,100%)">
+    <div id = "button" onclick="copyHSL()">Copy</div>
+  </div> 
+    </div>
+</div>
+<div class="row">
+  <h3 id="rOut" class="col-4">R : 255 HEX : ff</h3>
+  <h3 id="gOut" class="col-4">G : 255 HEX : ff</h3>
+  <h3 id="bOut" class="col-4">B : 255 HEX : ff</h3>
+<div class = "row">
+  <div class = "col-4">
+    <input id="rValue" oninput="rColor()" type="range" min="0" max="255" value="255">
+   </div>
+  <div class = "col-4">
+    <input id="gValue" oninput="gColor()" type="range" min="0" max="255" value="255">
+    </div>
+  <div class = "col-4">
+    <input id="bValue" oninput="bColor()" type="range" min="0" max="255" value="255">
+  </div> 
+  </div>
+  <div class="row">
+  <h3 id="hOut" class="col-4">H : </h3>
+  <h3 id="sOut" class="col-4">S : </h3>
+  <h3 id="lOut" class="col-4">L : </h3>
+</div>
+<div id = "row">
+  <div class = "col-4">
+    <input id = "hValue" oninput ="myHue()" type="range" min="0" max="360" value="360">
+    </div>
+  <div class = "col-4">
+    <input id = "sValue"  oninput="mySaturation()" type="range" min="0" max="100" value="100">
+    </div>
+  <div class = "col-4">
+    <input id = "lValue" oninput ="myLight()" type="range" min="0" max="100" value="100">
+  </div> 
+</div>
+<script>
+function rColor() {
+  x = document.getElementById("rValue").value;
+  y = toHex(x);
+  document.getElementById("rOut").innerHTML = `R : ${x} | HEX : ${y}`;
+  myColor();
+  rgb2Hsl();
+  
+}
+function gColor() {
+  x = document.getElementById("gValue").value;
+  y = toHex(x);
+  document.getElementById("gOut").innerHTML = `G : ${x} HEX : ${y}`;
+  myColor();
+  rgb2Hsl();
+}
+function bColor() {
+  x = document.getElementById("bValue").value;
+  y = toHex(x);
+  document.getElementById("bOut").innerHTML = `B : ${x} HEX : ${y}`;
+  myColor();
+  rgb2Hsl();
+}
+/*function aColor() {
+  x = document.getElementById("aValue").value;
+  x = x/10;
+  document.getElementById("aOutput").innerHTML = x;
+  myColor();
+  }*/
+function myColor() {
+  r = document.getElementById("rValue").value;
+  g = document.getElementById("gValue").value;
+  b = document.getElementById("bValue").value;
+  /*a = document.getElementById("aValue").value;
+  a = a / 10;*/
+  rHex = toHex(r);
+  gHex = toHex(g);
+  bHex = toHex(b);
+  /*b = a * 255;
+  aHex = toHex(b);*/
+  rgb = `rgba(${r}, ${g}, ${b})`;
+  hex =`#${rHex}${gHex}${bHex}`
+  document.body.style.backgroundColor = rgb;
+  /*document.getElementById("mid").style.backgroundColor = rgb;*/
+ /* document.getElementsByTagName("input").style.backgroundColor = rgb;*/
+  document.getElementById("rgbBar").value = rgb;
+  document.getElementById("hexBar").value = hex;
+  //document.getElementById("hexBar").value = Math.round(0.6703)*100;
+  };
+
+function copyRGB(){
+        let rgbBar = document.getElementById("rgbBar")
+        rgbBar.select();
+    rgbBar.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(rgbBar.value);
+    alert(`Copied the text: ${rgbBar.value}`);
+};
+function copyHEX(){
+        let hexBar = document.getElementById("hexBar")
+        hexBar.select();
+    hexBar.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(hexBar.value);
+    alert(`Copied the text: ${hexBar.value}`);
+};
+//GRAB HEX color
+function toHex(x){
+        let y = +x
+        y = y.toString(16)
+        return y
+        };
+
+function copyHSL() {
+  var hslBar= document.getElementById("hslBar");
+  hslBar.select();
+  hslBar.setSelectionRange(0,99999);
+  navigator.clipboard.writeText(hslBar.value);
+  alert(`Copied the text: ${hslBar.value}`);
+}
+function myHue(){
+var h = document.getElementById("hValue").value;
+document.getElementById("hOut").innerHTML = `H: ${h} \u00B0`;
+myHsl();
+}
+function mySaturation(){
+var h = document.getElementById("sValue").value;
+document.getElementById("sOut").innerHTML = `S: ${h} \u0025`;
+myHsl();
+} 
+function myLight(){
+var h = document.getElementById("lValue").value;
+document.getElementById("lOut").innerHTML = `L: ${h} \u0025`;
+myHsl();
+}
+ function myHsl(){
+var h = document.getElementById("hValue").value;
+var s = document.getElementById("sValue").value;
+var l = document.getElementById("lValue").value;
+var hsl = `hsl(${h}, ${s}%, ${l}%`;
+document.getElementById("hslBar").value = hsl;
+document.body.style.backgroundColor = hsl
+}
+
+function rgb2Hsl () {
+// Get values of RGB from the document
+var r =document.getElementById("rValue").value;
+var g =document.getElementById("gValue").value;
+var b =document.getElementById("bValue").value;
+
+// Divide values by 255
+r = r/255;
+g = g/255;
+b = b/255;
+
+// Find the Maximum and the minimum values
+var max = Math.max(r,g,b)
+var min = Math.min(r,g,b)
+var dif = max - min
+// Find L
+var L = (max + min)/2;
+L= L*100;
+
+// Find S
+if (dif = 0){
+	var S = 0;
+} else if (L <= 0.5){
+	var S =(max - min)/(max + min)
+} else {
+	var S =(max-min)/(2.0 - max + min)
+}
+S = Math.round(S*100)
+
+// Find H
+if (dif = 0){
+	var H = NaN
+} else if (max = r){
+	var H = ((g-b)/dif)
+} else if (max = g){
+	var H = 2 + ((b-r)/dif)
+} else if (max = b){
+	var H = 4+ ((r-g)/dif)
+}
+H = H * 60;
+// feed the values to HSl bar
+/*var hsl = `hsl(${H}, ${S}%, ${L}%`;*/
+document.getElementById("title").innerHTML = H;
+
+}
+</script>
+</body>
+</html>
